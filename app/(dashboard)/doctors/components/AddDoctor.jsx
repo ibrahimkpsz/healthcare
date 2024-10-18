@@ -67,21 +67,21 @@ const AddDoctor = ({ dispatch }) => {
                         <div className='flex items-center gap-3'>
                             <div className='flex flex-col gap-2'>
                                 <Label>Name</Label>
-                                <Input type="text" value={name} onChange={(e) => setName(e.target.value)} />
+                                <Input type="text" value={name} onChange={(e) => setName(e.target.value)} required />
                             </div>
                             <div className='flex flex-col gap-2'>
                                 <Label>Surname</Label>
-                                <Input type="text" value={surname} onChange={(e) => setSurname(e.target.value)} />
+                                <Input type="text" value={surname} onChange={(e) => setSurname(e.target.value)} required />
                             </div>
                         </div>
                         <div className='flex flex-col gap-2'>
                             <Label>Department</Label>
-                            <Input type="text" value={department} onChange={(e) => setDepartment(e.target.value)} />
+                            <Input type="text" value={department} onChange={(e) => setDepartment(e.target.value)} required />
                         </div>
 
                         <div className='flex flex-col gap-2'>
                             <Label>Email</Label>
-                            <Input type="email" value={email} onChange={(e) => setEmail(e.target.value)} />
+                            <Input type="email" value={email} onChange={(e) => setEmail(e.target.value)} required />
                         </div>
                         <div className='flex flex-col gap-2'>
                             <Label>Phone</Label>
@@ -90,6 +90,7 @@ const AddDoctor = ({ dispatch }) => {
                                 defaultCountry="TR"
                                 value={phone}
                                 onChange={(e) => setPhone(e)}
+                                required
                             />
                         </div>
                         <div className='flex flex-col gap-2'>
