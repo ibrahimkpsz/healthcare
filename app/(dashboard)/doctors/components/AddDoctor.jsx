@@ -99,7 +99,7 @@ const AddDoctor = ({ dispatch }) => {
                                 className="w-full file-uploader"
                                 sourceList="local, url, camera, dropbox"
                                 classNameUploader="uc-light"
-                                pubkey={process.env.NEXT_PUBLIC_UPLOADCARE_PUBLIC_KEY}
+                                pubkey="54b55040d181afdca370"
                                 onChange={handleFileUpload}
                             />
                         </div>
