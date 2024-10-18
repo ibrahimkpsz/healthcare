@@ -10,8 +10,10 @@ const Doctors = () => {
     const dispatch = useDispatch();
     const { doctors, status, error } = useSelector((state) => state.doctors);
     useEffect(() => {
-        dispatch(getDoctors());
-    }, [dispatch])
+        if (status === "idle") {
+            dispatch(getDoctors());
+        }
+    }, [dispatch, status])
 
     return (
         <div className='flex flex-col gap-10'>

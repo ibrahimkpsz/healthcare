@@ -40,17 +40,17 @@ const AppointmentForm = ({ doctors, dispatch }) => {
             <div className='flex flex-col items-center gap-5 md:flex-row'>
                 <div className='flex flex-col w-full gap-2'>
                     <Label>Name & Surname</Label>
-                    <Input name="patient_name" value={patientName} onChange={(e) => setPatientName(e.target.value)} type="text" />
+                    <Input name="patient_name" value={patientName} onChange={(e) => setPatientName(e.target.value)} type="text" required />
                 </div>
                 <div className='flex flex-col w-full gap-2'>
                     <Label>Phone</Label>
-                    <PhoneInput name="phone" defaultCountry="TR" value={phone} onChange={(e) => { setPhone(e) }} />
+                    <PhoneInput name="phone" defaultCountry="TR" value={phone} onChange={(e) => { setPhone(e) }} required />
                 </div>
             </div>
             <div className='flex flex-col items-center gap-5 lg:flex-row'>
                 <div className='flex flex-col w-full gap-2 fle-col'>
                     <Label>Doctor</Label>
-                    <Select name='doctor_name' value={doctorName} onValueChange={setDoctorName}>
+                    <Select name='doctor_name' value={doctorName} onValueChange={setDoctorName} required>
                         <SelectTrigger>
                             <SelectValue placeholder="Select Doctor" />
                         </SelectTrigger>
@@ -64,11 +64,11 @@ const AppointmentForm = ({ doctors, dispatch }) => {
                 <div className='flex items-center w-full gap-3'>
                     <div className='flex flex-col w-full gap-2'>
                         <Label>Date</Label>
-                        <DatePicker date={date} setDate={setDate} />
+                        <DatePicker date={date} setDate={setDate} required />
                     </div>
                     <div className='flex flex-col w-full gap-2'>
                         <Label>Time</Label>
-                        <Select name="time" value={time} onValueChange={setTime}>
+                        <Select name="time" value={time} onValueChange={setTime} required>
                             <SelectTrigger>
                                 <SelectValue placeholder="Select Time" />
                             </SelectTrigger>
