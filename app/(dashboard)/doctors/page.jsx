@@ -23,7 +23,7 @@ const Doctors = () => {
                 <AddDoctor dispatch={dispatch} />
             </div>
             <div className='grid grid-cols-1 gap-5 2xl:grid-cols-5 xl:grid-cols-4 lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-2'>
-                {doctors.map((doctor) => (
+                {doctors?.map((doctor) => (
                     <div className='border rounded-lg shadow-sm border-zinc-200' key={doctor._id}>
                         {!doctor.photo ? (
                             <div className='p-5 mx-auto rounded-t-lg'>

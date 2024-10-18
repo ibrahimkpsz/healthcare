@@ -17,7 +17,7 @@ const Dashboard = () => {
     return (
         <div className='flex flex-col gap-10'>
             <div className='flex flex-col gap-1'>
-                <h1 className='text-2xl font-semibold'>Welcome, Ibrahim.</h1>
+                <h1 className='text-2xl font-semibold'>Welcome, Healthcare.</h1>
                 <p className='text-sm text-zinc-600'>Stay on top of your appointments and manage doctors effortlessly.</p>
             </div>
             <Statistic appointments={appointments} />

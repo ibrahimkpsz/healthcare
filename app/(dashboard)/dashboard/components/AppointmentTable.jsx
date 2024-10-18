@@ -173,7 +173,7 @@ const AppointmentTable = ({ appointments, dispatch }) => {
                         ) : (
                             <TableRow>
                                 <TableCell colSpan={columns.length} className="h-24 text-center">
-                                    No
+                                    No results data.
                                 </TableCell>
                             </TableRow>
                         )}

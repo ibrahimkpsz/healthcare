@@ -55,7 +55,7 @@ const AppointmentForm = ({ doctors, dispatch }) => {
                             <SelectValue placeholder="Select Doctor" />
                         </SelectTrigger>
                         <SelectContent>
-                            {doctors.map((dr) => (
+                            {doctors?.map((dr) => (
                                 <SelectItem key={dr._id} value={dr.name + " " + dr.surname}>{dr.name + " " + dr.surname}</SelectItem>
                             ))}
                         </SelectContent>
