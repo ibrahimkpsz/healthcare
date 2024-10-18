@@ -8,11 +8,13 @@ import { getDoctors } from '@/lib/features/doctorsSlice';
 
 const Appointment = () => {
     const dispatch = useDispatch();
-    const { doctors } = useSelector((state) => state.doctors);
+    const { doctors, status } = useSelector((state) => state.doctors);
 
     useEffect(() => {
-        dispatch(getDoctors());
-    }, [dispatch]);
+        if(status === "idle") {
+            dispatch(getDoctors());
+        }
+    }, [dispatch,status]);
     
     return (
         <div className='grid grid-cols-1 pt-[76px] lg:grid-cols-2'>
