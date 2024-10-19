@@ -2,7 +2,7 @@ import Link from 'next/link'
 import React from 'react'
 import { Button } from './ui/button'
 import { HeartPulse } from 'lucide-react';
-import { SignedIn, SignedOut, SignInButton, SignOutButton, UserButton } from '@clerk/nextjs';
+import { SignedIn, SignedOut, SignOutButton } from '@clerk/nextjs';
 
 const Header = () => {
   return (
@@ -15,7 +15,7 @@ const Header = () => {
         <div className='flex items-center gap-3'>
           <SignedOut>
             <Button asChild variant="ghost">
-              <SignInButton>Sign in</SignInButton>
+              <Link href="/signin">Sign in</Link>
             </Button>
           </SignedOut>
           <SignedIn>

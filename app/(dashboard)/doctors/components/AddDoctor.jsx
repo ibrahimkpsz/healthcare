@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import {
     Sheet,
+    SheetClose,
     SheetContent,
     SheetHeader,
     SheetTitle,
@@ -105,7 +106,9 @@ const AddDoctor = ({ dispatch }) => {
                             />
                         </div>
                     </div>
-                    <Button type="submit">Add Doctor</Button>
+                    <SheetClose>
+                        <Button type="submit">Add Doctor</Button>
+                    </SheetClose>
                 </form>
             </SheetContent>
         </Sheet>
